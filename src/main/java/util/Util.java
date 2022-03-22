@@ -20,7 +20,7 @@ public class Util {
         }
         return connection;
     }
-
+               /** CREATE Method*/
     public static void createTable() {
         String sql = "CREATE TABLE IF NOT EXISTS developers" +
                 "(id SERIAL PRIMARY KEY NOT NULL, " +
@@ -37,6 +37,8 @@ public class Util {
         }
     }
 
+
+                   /** Add new user Method*/
     public static void addUser(String name, String surname) {
         String sql = "INSERT INTO developers(name,surname) values(?,?)";
         try (Connection connection = connection();
@@ -50,7 +52,7 @@ public class Util {
             System.out.println(e.getMessage());
         }
     }
-
+                /** Get All Users Method*/
     public static void getAllUsers() {
         String sql = "SELECT*FROM developers";
         try (Connection connection = connection();
@@ -68,6 +70,8 @@ public class Util {
 
     }
 
+
+                   /** Get Users by ID Method*/
     public static void getUserById(int id) {
         String sql = "SELECT * FROM developers WHERE Id =?";
         try (Connection connection = connection();
@@ -88,7 +92,7 @@ public class Util {
         }
 
     }
-
+                /** Delete users from Table Method*/
     public static void deleteUserById(int id) {
         String sql = "DELETE FROM developers WHERE id=?";
         try (Connection connection = connection();
