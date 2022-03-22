@@ -9,7 +9,8 @@ public class App
     {
 //        Util.connection();
 //        Util.createTable();
-//        Util.addUser("Myrza","Daumaev");
+//        Util.addUser("Mirbek","Atabekov");
+        Util.changeUserSurname("Talipov");
 
       Util.getAllUsers();
 //      Util.getUserById(2);

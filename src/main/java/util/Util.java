@@ -119,6 +119,19 @@ public class Util {
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
+    }
+
+                 /** Change users surname Method*/
+    public static void changeUserSurname(String surname){
+        String sql = "UPDATE Developers SET surname = ?";
+        try(Connection connection = connection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setString(1,surname);
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+
 
     }
 }
