@@ -2,10 +2,7 @@ package org.example;
 
 import util.Util;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
