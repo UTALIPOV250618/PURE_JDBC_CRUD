@@ -14,6 +14,7 @@ public class App
       Util.getAllUsers();
 //      Util.getUserById(2);
 //      Util.deleteUserById(1);
+//        Util.updateUserName(2,"Azur");
 
     }
 }

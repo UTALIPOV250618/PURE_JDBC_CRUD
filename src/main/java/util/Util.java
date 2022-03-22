@@ -106,5 +106,20 @@ public class Util {
         }
 
     }
+
+                        /** Update users name Method*/
+    public static void updateUserName(int id,String name){
+        String sql = "UPDATE Developers SET name =? "+"WHERE id =?";
+        try(Connection connection  = connection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setString(1,name);
+            preparedStatement.setInt(2,id);
+            preparedStatement.executeUpdate();
+            System.out.println("Changes executed successfully");
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+
+    }
 }
 
